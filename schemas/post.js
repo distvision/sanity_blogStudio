@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'subtitle',
+      title: 'SubTitle',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -43,11 +48,15 @@ export default defineType({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      options: {
+            dateFormat: 'YYYY-MM-DD',
+            timeFormat: 'HH:mm',
+          }
     }),
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'markdown',
     }),
   ],
 
